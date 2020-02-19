@@ -41,7 +41,7 @@ body {
     margin: auto;
     text-align: center;
     vertical-align: middle;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 } .active {
     color: #FFFFFF;
     font-size: 30pt;
@@ -50,4 +50,5 @@ body {
     color: red;
 } .hidden {
     background-color: #929292;
+
 }
