@@ -8,6 +8,14 @@ body {
     /* overflow: hidden */
 }
 
+button {
+    border: none;
+    color: #dd6723;
+    background-color: #000000;
+    text-align: center;
+    font-size: 35px;
+}
+
 #game {
     height: 100%;
 }
@@ -16,13 +24,23 @@ body {
     height: 100px;
 }
 
+.end-screen {
+    margin: auto;
+    width: 500px;
+    text-align: center;
+} 
+
+.end-screen h1 {
+    font-size: 36px
+}
+
 #game-container {
     display: table;
     table-layout: fixed;
     /* height: 80%;
     width: 90%; */
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     overflow: hidden;
     
 }
@@ -44,11 +62,10 @@ body {
     /* border: 1px solid red; */
 } .active {
     color: #FFFFFF;
-    font-size: 30pt;
-    
+    font-size: 42pt;
+    font-style: bold'
 } .inactive {
     color: red;
 } .hidden {
     background-color: #929292;
-
 }

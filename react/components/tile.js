@@ -32,7 +32,7 @@ export default class Tile extends React.Component {
     handleClick(tile) {
         if (this.state.hidden) this.setState({hidden: false})
         console.log(this.state.hidden)
-        this.props.handleClick(tile)
+        if (this.props.type === 'active') this.props.handleClick(tile)
     }
 
     render() {
