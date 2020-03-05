@@ -26,7 +26,6 @@ export default class Game extends React.Component {
     }
 
     seedTiles() { 
-        console.log(this.props)
         let totalTiles = this.state.dimensions[0] * this.state.dimensions[1]
         const selected = []
         while (selected.length < this.state.difficulty) {
@@ -71,7 +70,6 @@ export default class Game extends React.Component {
             
         }
         this.setState(prevState => ({...prevState, board }))
-        console.log('board state set!', this.state.board)
     }
 
     handleClick(tile) {   
@@ -84,19 +82,13 @@ export default class Game extends React.Component {
             this.setState(prevState => ({...prevState, board: newBoard}))
             if (this.state.selected.length === 1) this.props.setView('win') //I feel weird about this
         } else {
-            console.log('Oops!')
             setTimeout(() => {
-                // this.setState(prevState => ({...prevState, lose: true}))
                 this.props.setView('lose')
             }, 500)
         }
     }
 
     render() {
-        console.log('rendering')
-        // const win = (!this.state.selected.length)
-        // const lose = this.state.lose
-
         return (
             <div id="game-container">
                 {this.state.board.map((row, rindex) => {

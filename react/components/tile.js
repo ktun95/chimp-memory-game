@@ -10,20 +10,12 @@ export default class Tile extends React.Component {
     }
     
     componentDidMount() {
-        // console.log(this.props)
-        // console.log('component mounted', this.props)
         this.hide()
-        // console.log('component mountingTILE TILE TILE')
     }
-
-    // componentDidUpdate() {
-    //     this.hide()
-    // }
 
     hide() {
         setTimeout(() => {
             if (this.props.type === 'active') {
-                console.log('hiding tile')
                 this.setState((prevState) => ({...prevState, hidden: true}))
             }
         }, 1000)
@@ -31,14 +23,12 @@ export default class Tile extends React.Component {
 
     handleClick(tile) {
         if (this.state.hidden) this.setState({hidden: false})
-        console.log(this.state.hidden)
         if (this.props.type === 'active') this.props.handleClick(tile)
     }
 
     render() {
-        console.log('tiles rendering')
         return (
-            <div className={`tile ${this.state.hidden ? 'hidden' : this.props.type}`} onClick={() => this.handleClick(this)} data-key={this.props.key}>
+            <div className={`tile ${this.state.hidden ? 'hidden' : this.props.type}`} onClick={() => this.handleClick(this)}>
                 {this.props.type === 'active' && !this.state.hidden ? `${this.props.order}` : null}
             </div>
         )        

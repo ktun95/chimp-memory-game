@@ -24,14 +24,48 @@ button {
     height: 100px;
 }
 
-.end-screen {
+.menu {
+    position: relative;
+    top: 200px;
+    /* left: 50%; */
     margin: auto;
     width: 500px;
     text-align: center;
 } 
 
-.end-screen h1 {
-    font-size: 36px
+.menu h1 {
+    font-size: 42px;
+}
+
+.custom-select {
+    padding: 16px;
+    text-align: left;
+}
+
+.selector {
+    display: inline-block;
+    position: relative;
+    left: 50px;
+}
+
+#difficulty {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+.select-label {
+    display: inline;
+    position: relative;
+    /* float: left; */
+    font-size: 36px;
+    color: #bdbbbb;
+    left: 0;
+    text-align: left;
+}
+
+.menu select {
+    display: inline;
 }
 
 #game-container {
@@ -62,7 +96,7 @@ button {
     /* border: 1px solid red; */
 } .active {
     color: #FFFFFF;
-    font-size: 42pt;
+    font-size: 60pt;
     font-style: bold'
 } .inactive {
     color: red;

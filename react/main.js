@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-import { Header, Game, WinScreen, LoseScreen  } from './components'
+import { Game, WinScreen, LoseScreen, startMenu, StartMenu  } from './components'
 
 export const Main = () => {
 
     const [difficulty, setDifficulty] = useState(4)
-    const [view, setView] = useState('game') // game/lose/win
+    const [view, setView] = useState('start') // game/lose/win
 
     return (
         <React.Fragment>
-            <Header />
-            { 
+            {   view === 'start' ?
+                <StartMenu setView={setView} setDifficulty={setDifficulty} difficulty={difficulty} /> :
                 view === 'game' ?
                 <Game setView={setView} difficulty={difficulty} /> :
                 view === 'win' ?
