@@ -18,11 +18,7 @@ export default class Game extends React.Component {
     }
 
     componentDidMount() {
-        
         this.buildGame()
-    }
-    
-    componentDidUpdate() {   
     }
 
     seedTiles() { 
@@ -40,10 +36,6 @@ export default class Game extends React.Component {
         return selected
     }
 
-    changeDifficulty(difficulty) {
-        
-    }
-    
     buildGame() {
         let rowNum = 0
         const board = []        
